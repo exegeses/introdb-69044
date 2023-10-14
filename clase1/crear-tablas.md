@@ -19,8 +19,8 @@
 
     CREATE TABLE productos_apple  
     (  
-        id smallint unsigned,
-        nombre varchar(30),
-        precio decimal(10,2) unsigned,
-        stock smallint unsigned
+        id smallint unsigned auto_increment primary key not null,
+        nombre varchar(30) unique not null,
+        precio decimal(10,2) unsigned not null,
+        stock smallint unsigned not null
     );
