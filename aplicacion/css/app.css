@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600&display=swap');
+:root{
+    --bgc: #1F232A;
+    --c: #dadada;
+    --accent: #8AC796;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bgc);
+    color: var(--c);
+    font-family: 'Figtree', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 640px;
+    height: 96px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+    header a img{
+        width: 64px;
+        position: relative;
+        left: 8px;
+        top: 16px;
+    }
+    nav{
+        transform: translateY(-184px);
+        transition: 500ms;
+    }
+    header nav a{
+        color: var(--c);
+        display: block;
+        font-weight: 500;
+        text-align: center;
+        padding: 8px;
+        transition: 400ms;
+    }
+        header nav a:hover{
+            background-color: #0e140f;
+            color: var(--accent);
+        }
+    #hamburger{
+        position: absolute;
+        right: 8px;
+        top: 24px
+    }
+    .dropdown{
+        transform: translateY(32px);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    }
+/* main */
+    main{
+        width: 640px;
+        margin: 32px auto;
+    }
+        #marcas,
+        #categorias
+        {
+            margin-top: 32px;
+        }
+        #marcas ul li,
+        #categorias ul li
+        {
+            list-style-type: none;
+            padding-left: 24px;
+            margin: 16px;
+        }
+            #marcas ul li:hover,
+            #categorias ul li:hover
+            {
+                color: var(--accent);
+            }
+        #marcas ul li:before{
+            content: url("../imgs/ellipsis-vertical-outline.svg");
+        }
+        #categorias ul li:before{
+            content: url("../imgs/bookmark-outline.svg");
+        }
+        #marcas ul li:before,
+        #categorias ul li:before
+        {
+            filter: invert();
+            position: relative;
+            top: 8px;
+            left: -16px;
+        }
+
+
+main a{
+        color: var(--c);
+    }
+    main a{
+        color: var(--accent);
+    }
+
+@media screen and (min-width: 768px) {
+
+    .container{
+        width: 768px;
+        height: 96px;
+        margin: auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header a img{
+        width: 64px;
+        position: static;
+    }
+    nav{
+        transform: translateY(0px);
+    }
+    header nav a{
+        color: var(--c);
+        display: inline-block;
+        font-weight: 500;
+        text-align: center;
+        padding: 16px 24px;
+        transition: 400ms;
+    }
+    header nav a:hover{
+        background-color: rgba(14, 20, 15, 0.1);
+        color: var(--accent);
+    }
+    #hamburger{
+        visibility: hidden;
+    }
+
+    main{
+        width: 768px;
+    }
+        #marcas,
+        #categorias
+        {
+            width: 640px;
+            margin: auto;
+        }
+}
